@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyk8s11kyofem"]
+
+[ext_resource type="Script" path="res://Scripts/room.gd" id="1_1s8jx"]
+[ext_resource type="PackedScene" uid="uid://cavuom5wh6j4g" path="res://Scenes/door.tscn" id="1_up0la"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="3_tabuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bklwu"]
+size = Vector2(77, 22)
+
+[node name="Room_1" type="Node"]
+script = ExtResource("1_1s8jx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 167.0
+offset_top = 156.0
+offset_right = 706.0
+offset_bottom = 499.0
+color = Color(0.733333, 0.658824, 0.184314, 1)
+
+[node name="EastDoorRect" type="ColorRect" parent="."]
+offset_left = 689.0
+offset_top = 290.0
+offset_right = 729.0
+offset_bottom = 370.0
+color = Color(0.376748, 0.458719, 0.83344, 1)
+
+[node name="NorthDoorRect" type="ColorRect" parent="."]
+offset_left = 386.0
+offset_top = 144.0
+offset_right = 463.0
+offset_bottom = 169.0
+color = Color(0.376471, 0.458824, 0.835294, 1)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_e" parent="Doors" instance=ExtResource("1_up0la")]
+destination_level_tag = "Room_2"
+destination_door_tag = "w"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="Doors/Door_e" index="0"]
+position = Vector2(710.5, 330)
+
+[node name="Spawn" parent="Doors/Door_e" index="1"]
+position = Vector2(661, 332)
+
+[node name="Door_n" type="Area2D" parent="Doors"]
+position = Vector2(430, 150)
+script = ExtResource("3_tabuo")
+destination_level_tag = "Room_3"
+destination_door_tag = "s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_n"]
+position = Vector2(-4.5, 7)
+shape = SubResource("RectangleShape2D_bklwu")
+
+[node name="Spawn" type="Marker2D" parent="Doors/Door_n"]
+position = Vector2(-1, 65)
+
+[connection signal="body_entered" from="Doors/Door_n" to="Doors/Door_n" method="_on_body_entered"]
+
+[editable path="Doors/Door_e"]
