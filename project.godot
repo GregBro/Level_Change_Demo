@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 NavigationManager="*res://Scripts/navigation_manager.gd"
+TransitionScene="*res://Scenes/TransitionScene.tscn"

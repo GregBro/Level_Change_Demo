@@ -25,6 +25,8 @@ func go_to_level(destination_level_tag, destination_door_tag) -> void:
 			scene_to_load = room_3
 			
 	if scene_to_load != null :
+		TransitionScene.transition()
+		await TransitionScene.on_transition_finished
 		spawn_door_tag = destination_door_tag
 		print("spawn_door_tag: " + spawn_door_tag)
 		get_tree().change_scene_to_packed.bind(scene_to_load).call_deferred()
