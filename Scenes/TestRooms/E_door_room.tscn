@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://2m73hcail1ne"]
+
+[ext_resource type="Script" path="res://Scripts/room.gd" id="1_hg8k2"]
+[ext_resource type="PackedScene" uid="uid://cavuom5wh6j4g" path="res://Scenes/door.tscn" id="2_okglq"]
+
+[node name="EDoorRoom" type="Node"]
+script = ExtResource("1_hg8k2")
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_left = 165.0
+offset_top = 157.0
+offset_right = 707.0
+offset_bottom = 498.0
+color = Color(0.203922, 0.521569, 0.768627, 1)
+
+[node name="EastDoorRect" type="ColorRect" parent="."]
+offset_left = 690.0
+offset_top = 297.0
+offset_right = 724.0
+offset_bottom = 366.0
+color = Color(1, 0.843137, 0.168627, 1)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_e" parent="Doors" instance=ExtResource("2_okglq")]
+position = Vector2(681, 334)
+destination_level_tag = "Room_1"
+destination_door_tag = "e"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="Doors/Door_e" index="0"]
+position = Vector2(27.5, -2)
+
+[node name="Spawn" parent="Doors/Door_e" index="1"]
+position = Vector2(-24, -5)
+
+[editable path="Doors/Door_e"]

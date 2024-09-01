@@ -1,0 +1,24 @@
+[
+ {
+   "Level": 0,
+   "LargeAsteroidCount": 4,
+   "MediumAsteroidCount": 2,
+   "SmallAsteroidCount": 3,
+   "AsteroidSpawnTime": 1,
+   "ShipsAdded": 0,
+   "AsteroidTopSpeed" : 120,
+   "PlayerEnabled" : false,
+   "IsLastLevel"	: false
+  },
+  {
+   "Level": 1,
+   "LargeAsteroidCount": 4,
+   "MediumAsteroidCount": 0,
+   "SmallAsteroidCount": 0,
+   "AsteroidSpawnTime": 4,
+   "ShipsAdded": 0,
+   "AsteroidTopSpeed" : 120,
+   "PlayerEnabled" : true,
+   "IsLastLevel"	: false
+ }
+]

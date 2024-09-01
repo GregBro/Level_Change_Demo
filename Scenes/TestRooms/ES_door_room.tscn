@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://44tk5i0sswqa"]
+
+[ext_resource type="Script" path="res://Scripts/four_door_room.gd" id="1_nyvar"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="2_5y64r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i3fo"]
+size = Vector2(73.25, 36.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfcvw"]
+size = Vector2(37, 70)
+
+[node name="ESDoorRoom" type="Node"]
+script = ExtResource("1_nyvar")
+
+[node name="Floor" type="ColorRect" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 560.0
+offset_bottom = 340.0
+color = Color(0.280295, 0.787432, 0.40873, 1)
+
+[node name="SouthDoor" type="ColorRect" parent="."]
+offset_left = 257.0
+offset_top = 320.0
+offset_right = 330.0
+offset_bottom = 356.0
+color = Color(1, 0.168627, 1, 1)
+
+[node name="EastDoor" type="ColorRect" parent="."]
+offset_left = 541.0
+offset_top = 140.0
+offset_right = 580.0
+offset_bottom = 211.0
+color = Color(1, 0.168627, 1, 1)
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_s" type="Area2D" parent="Doors"]
+position = Vector2(275, 332)
+script = ExtResource("2_5y64r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_s"]
+position = Vector2(16.25, 6.75)
+shape = SubResource("RectangleShape2D_4i3fo")
+
+[node name="Spawn" type="Marker2D" parent="Doors/Door_s"]
+position = Vector2(16, -42)
+
+[node name="Door_e" type="Area2D" parent="Doors"]
+position = Vector2(560, 171)
+script = ExtResource("2_5y64r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_e"]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_hfcvw")
+
+[node name="Spawn" type="Marker2D" parent="Doors/Door_e"]
+position = Vector2(-56, 3)
+
+[connection signal="body_entered" from="Doors/Door_s" to="Doors/Door_s" method="_on_body_entered"]
+[connection signal="body_entered" from="Doors/Door_e" to="Doors/Door_e" method="_on_body_entered"]

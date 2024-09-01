@@ -1,39 +1,41 @@
 extends Node
 
-const room_1 = preload("res://Scenes/room_1.tscn")
-const room_2 = preload("res://Scenes/room_2.tscn")
-const room_3 = preload("res://Scenes/room_3.tscn")
+
 
 signal on_trigger_player_spawn
 
+var current_room : int = 0
+var destination_door 
 var spawn_door_tag
-var scene_to_load
+
 
 var player : Player = null
 
+var level_dictionary
+var room_array : Array
+
 func go_to_level(destination_level_tag, destination_door_tag) -> void:
 	#print("Got to go_to_level")
-	#print("destination_level_tag: " + str(destination_level_tag))
-	#print("destination_door_tag: " + str(destination_door_tag))
-	
-	match destination_level_tag:
-		"Room_1":
-			scene_to_load = room_1
-		"Room_2" :
-			scene_to_load = room_2
-		"Room_3" :
-			scene_to_load = room_3
-			
-	if scene_to_load != null :
-		TransitionScene.transition()
-		await TransitionScene.on_transition_finished
-		spawn_door_tag = destination_door_tag
-		print("spawn_door_tag: " + spawn_door_tag)
-		get_tree().change_scene_to_packed.bind(scene_to_load).call_deferred()
-	
+	print("destination_level_tag: " + str(destination_level_tag))
+	print("destination_door_tag: " + str(destination_door_tag))
+	current_room = int(destination_level_tag)
+	destination_door = "Door_" + destination_door_tag
+	TransitionScene.transition()
+	await TransitionScene.on_transition_finished
+	spawn_door_tag = destination_door_tag
+	#print("spawn_door_tag: " + spawn_door_tag)
+	var roomData = level_dictionary[0].Rooms[int(destination_level_tag)]
+	var scene_to_load : PackedScene =  load("res://Scenes/"+ roomData.Room_Node )
+	get_tree().change_scene_to_packed.bind(scene_to_load).call_deferred()
 
 # The reason the player doesn't show up is because the original Player object was attached to the first room
 # The Player object needs to be the same object across all scenes.  So we need to hold onto the Player object
 # inside the NavigationManager
 func trigger_player_spawn(position: Vector2, direction:String):
 	on_trigger_player_spawn.emit(position, direction)
+
+
+func load_data_dictionary(dictionary_json):
+	var json_as_text = FileAccess.get_file_as_string(dictionary_json)
+	level_dictionary = JSON.parse_string(json_as_text)
+	

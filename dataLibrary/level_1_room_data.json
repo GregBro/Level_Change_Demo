@@ -1,0 +1,34 @@
+[
+	{
+		"level_title" : "Level One Test",
+		"String_Room" : "0",
+		"Rooms": [
+			{
+				"Room_ID"	 : 0,
+				"Room_Node"  : "TestRooms/N_door_room.tscn",
+				"Room_Color" : "1945dd",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "1",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up"
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 1,
+				"Room_Node"  : "TestRooms/S_door_room.tscn",
+				"Room_Color" : "294dc8",
+				"Door_Color" : "214aa8",
+				"Doors"		 : [
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "0",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down"
+					}
+				]
+			}
+		]
+	}
+]
