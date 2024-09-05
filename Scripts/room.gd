@@ -2,10 +2,13 @@ extends Node
 
 class_name Room
 
+@export var room_id : int = 0
+
 @onready var player_packed_scene = preload("res://Scenes/player.tscn")
 var player : Player = null
 
 func _ready() -> void:
+	#getNode("$RoomNumber").text = str(NavigationManager.current_room)
 	var level_data = NavigationManager.level_dictionary[0]
 	load_date_from_dictionary(level_data.Rooms[NavigationManager.current_room])
 #	TODO Move this to Globals
@@ -31,8 +34,11 @@ func load_date_from_dictionary(level_data):
 	room_floor.set_color(level_data.Room_Color)
 	var doors_node = get_node("Doors")
 	var door_array = level_data.Doors
-	print(door_array)
+	#print(door_array)
 	load_door_data(doors_node,door_array)
+	#var parent = get_parent()
+	#var room_label = parent.get_node("$RoomNumber")
+	#room_label.text = str(level_data.Room_ID)
 
 func load_door_data(doors_node,door_array) :
 	if doors_node.find_child("Door_n") :

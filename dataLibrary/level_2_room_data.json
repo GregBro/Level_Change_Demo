@@ -1,0 +1,392 @@
+[
+	{
+		"level_title" : "Level Two Test",
+		"Starting_Room" : "0",
+		"Rooms": [
+			{
+				"Room_ID"	 : 0,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "1945dd",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "4",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "8",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "1",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "3",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 1,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "19a5dd",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "5",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "9",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "2",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "0",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 2,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "19cedd",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "6",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "10",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "3",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "1",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 3,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "19ddc5",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "7",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "11",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "0",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "2",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 4,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "abdd19",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "8",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "0",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "5",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "7",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 5,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "93dd19",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "9",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "1",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "6",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "4",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 6,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "78dd19",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "10",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "2",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "7",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "3",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},	
+			{
+				"Room_ID"	 : 7,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "1cad0e",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "11",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "3",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "4",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "6",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},	
+			{
+				"Room_ID"	 : 8,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "ec0c61",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "0",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "4",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "9",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "11",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},	
+			{
+				"Room_ID"	 : 9,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "ec0c61",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "1",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "5",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "10",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "8",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 10,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "ec0cb2",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "2",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "6",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "11",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "9",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			},
+			{
+				"Room_ID"	 : 11,
+				"Room_Node"  : "TestRooms/Four_door_room.tscn",
+				"Room_Color" : "ee6eee",
+				"Door_Color" : "294dc8",
+				"Doors"		 : [
+					{ "Name" : "Door_n",
+						"Destination_Level_Tag" : "3",
+						"Destination_Door_Tag" : "s",
+						"Spawn_Direction": "up",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_s",
+						"Destination_Level_Tag" : "7",
+						"Destination_Door_Tag" : "n",
+						"Spawn_Direction": "down",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_e",
+						"Destination_Level_Tag" : "8",
+						"Destination_Door_Tag" : "w",
+						"Spawn_Direction": "right",
+						"Teleport" : false
+					},
+					{ "Name" : "Door_w",
+						"Destination_Level_Tag" : "10",
+						"Destination_Door_Tag" : "e",
+						"Spawn_Direction": "left",
+						"Teleport" : false
+					}
+				]
+			}
+		]
+	}
+]

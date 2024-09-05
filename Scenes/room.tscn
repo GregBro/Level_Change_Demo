@@ -4,3 +4,9 @@
 
 [node name="Room" type="Node"]
 script = ExtResource("1_gyhfe")
+
+[node name="RoomNumber" type="Label" parent="."]
+offset_left = 734.0
+offset_top = 26.0
+offset_right = 774.0
+offset_bottom = 49.0

@@ -10,5 +10,5 @@ class_name Door
 func _on_body_entered(body: Node2D) -> void:
 	#print("body entered")
 	if body is Player :
-		print ("I see a player")
+		#print ("I see a player")
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)

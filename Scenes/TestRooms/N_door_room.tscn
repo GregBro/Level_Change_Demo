@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbu0deq2t7d67"]
+[gd_scene load_steps=5 format=3 uid="uid://dbu0deq2t7d67"]
 
 [ext_resource type="Script" path="res://Scripts/room.gd" id="1_ukkwg"]
 [ext_resource type="Script" path="res://Scripts/door.gd" id="2_b8bbj"]
+[ext_resource type="PackedScene" uid="uid://ce307kqqxskfa" path="res://Scenes/default_room_size_template.tscn" id="2_guhmq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haipy"]
 size = Vector2(74, 25)
@@ -9,18 +10,21 @@ size = Vector2(74, 25)
 [node name="NDoorRoom" type="Node"]
 script = ExtResource("1_ukkwg")
 
+[node name="DefaultRoomSizeTemplate" parent="." instance=ExtResource("2_guhmq")]
+visible = false
+
 [node name="Floor" type="ColorRect" parent="."]
-offset_left = 166.0
-offset_top = 149.0
-offset_right = 701.0
-offset_bottom = 495.0
+offset_left = 34.0
+offset_top = 30.0
+offset_right = 729.0
+offset_bottom = 451.0
 color = Color(0.360784, 1, 0.45098, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 387.0
-offset_top = 137.0
-offset_right = 465.0
-offset_bottom = 163.0
+offset_left = 343.0
+offset_top = 18.0
+offset_right = 421.0
+offset_bottom = 44.0
 color = Color(1, 0.192157, 1, 1)
 
 [node name="Doors" type="Node" parent="."]
@@ -33,10 +37,10 @@ destination_door_tag = "n"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_n"]
-position = Vector2(53, -343)
+position = Vector2(8, -462)
 shape = SubResource("RectangleShape2D_haipy")
 
 [node name="Spawn" type="Marker2D" parent="Doors/Door_n"]
-position = Vector2(57, -276)
+position = Vector2(9, -410)
 
 [connection signal="body_entered" from="Doors/Door_n" to="Doors/Door_n" method="_on_body_entered"]
